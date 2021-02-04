@@ -23,13 +23,13 @@ bt <- c("A", "B", "B", "O", "AB", "A")
 bt
 fbt <- factor(bt)
 bt
-fbt
+fbt ##Levels : A AB B O #종류를 나타냄. 중복제거
 
 bt[5]
 fbt[5]
 # levels()는 팩터에 저장된 데이터의 종류를 알려준다.
 levels(fbt)
-as.integer(fbt)
+as.integer(fbt) #levels 에 해당하는 자리를 반환
 length(fbt)
 
 fbt[7] <- "B"
