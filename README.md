@@ -182,3 +182,57 @@ condi
 d[condi]
 ```
 
+### 리스트
+- 리스트(벡터와 같은 1차원데이터를 나타내는 것은 맞으나
+- 리스트는 다른 데이터형을 가질수 있는 것이 바로 리스트다)
+
+- 리스트 작성하기
+```
+ds <- c(10,15,70,85)
+myinfo <- list(name = "신은혁", age = 12, status = TRUE, score = ds)
+myinfo
+```
+- 리스트 접근과 출력
+```
+myinfo[[3]]
+myinfo$name  # $이용하는 방법 권장드림.
+myinfo$score
+```
+- unlist() : 리스트를 벡터로 변경
+```
+vmyinfo <- unlist(myinfo)
+vmyinfo
+```
+- as.integer() 다른데이터형을 숫자형으로 변경
+```
+v1 = as.integer(vmyinfo[2])
+v1
+```
+
+- 팩터(factor)
+```
+bt <- c("A", "B", "B", "O", "AB", "A")
+bt
+fbt <- factor(bt)
+bt
+fbt ##Levels : A AB B O #종류를 나타냄. 중복제거
+
+bt[5]
+fbt[5]
+# levels()는 팩터에 저장된 데이터의 종류를 알려준다.
+levels(fbt)
+as.integer(fbt) #levels 에 해당하는 자리를 반환
+length(fbt)
+
+fbt[7] <- "B"
+fbt
+```
+
+- 팩터 그외요소
+```
+# Z라는 값은 fbt라는 팩터의 level에 그 값이 없다.
+# 하여, NA생성한다.
+fbt[8] <- "Z"
+fbt
+```
+- 
